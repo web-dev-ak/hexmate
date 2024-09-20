@@ -120,7 +120,7 @@ span {
     height: 385px;
     border: 1px solid var(--bdr-25);
     border-radius: 25px;
-    background-color: transparent;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
