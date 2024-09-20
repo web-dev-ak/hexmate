@@ -1,0 +1,238 @@
+[data-theme="light"] {
+    --bg-100: #FFFFFF;
+    --bdr-25: rgba(0, 0, 0, 0.25);
+    --fg-75: rgba(0, 0, 0, 0.75);
+    --fg-50: rgba(0, 0, 0, 0.5);
+    --btn: #1E1E1E;
+}
+
+[data-theme="dark"] {
+    --bg-100: #1E1E1E;
+    --bdr-25: rgba(255, 255, 255, 0.25);
+    --fg-75: rgba(255, 255, 255, 0.75);
+    --fg-50: rgba(255, 255, 255, 0.5);
+    --btn: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Satoshi', sans-serif;
+}
+
+#body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--bg-100);
+    overflow: hidden;
+}
+
+#nav-box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#nav-box>#logo-box {
+    display: grid;
+    place-content: center;
+}
+
+#nav-box>#logo-box>#logo {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--fg-75);
+}
+
+#theme-switch-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--bdr-25);
+    border-radius: 25px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#light-mode-icon {
+    display: block;
+}
+
+#dark-mode-icon {
+    display: none;
+}
+
+#main {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 640px;
+}
+
+#color-code-box {
+    width: 100%;
+    height: 80px;
+    gap: 10px;
+    display: flex;
+}
+
+#rgb-code-box,
+#hex-code-box {
+    width: 50%;
+    height: 100%;
+    border: 1px solid var(--bdr-25);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-code-box-title {
+    font-size: 12px;
+    color: var(--fg-75);
+}
+
+span {
+    font-size: 20px;
+    color: var(--fg-75);
+}
+
+#color-preview-box {
+    width: 100%;
+    height: 385px;
+    border: 1px solid var(--bdr-25);
+    border-radius: 25px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#gen-btn {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 50px;
+    color: var(--bg-100);
+    border: 1px solid var(--bdr-25);
+    background-color: var(--btn);
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn::before {
+    content: "";
+    background: linear-gradient(45deg,
+            #FF0000, #FF7300, #FFFB00, #48FF00,
+            #00FFD5, #002BFF, #FF00C8, #FF0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(5px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 50px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* hover */
+.btn:hover::before {
+    opacity: 0.5;
+}
+
+.btn:active:after {
+    background: transparent;
+}
+
+/* ALERT BOX CONTAINER */
+.alert-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-content {
+    background: var(--bg-100);
+    padding: 20px;
+    border-radius: 25px;
+    width: 300px;
+    text-align: center;
+    color: var(--fg-75);
+}
+
+#alert-message {
+    margin-bottom: 20px;
+    color: var(--fg-75);
+}
+
+#alert-ok-btn {
+    padding: 10px 20px;
+    background-color: var(--btn);
+    color: var(--bg-100);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#alert-ok-btn:hover {
+    opacity: 0.8;
+}
+
+/* DEVELOPER CREDITS */
+#dev-info-box {}
+
+.dev-credits {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#dev-portfolio-link {
+    font-weight: 600;
+}

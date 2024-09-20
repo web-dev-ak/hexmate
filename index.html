@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Color Change</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <header id="nav-box">
+        <div id="theme-switch-btn">
+            <span id="light-mode-icon" class="material-symbols-outlined">light_mode</span>
+            <span id="dark-mode-icon" class="material-symbols-outlined">dark_mode</span>
+        </div>
+        <div id="logo-box">
+            <h1 id="logo">HexMate</h1>
+        </div>
+    </header>
+
+    <section id="main">
+        <div id="color-code-box">
+            <div id="hex-code-box">
+                <span class="color-code-box-title">HEX</span>
+                <span>#<span id="hex-code">FFFFFF</span></span>
+            </div>
+            <div id="rgb-code-box">
+                <span class="color-code-box-title">RGB</span>
+                <span id="rgb-code">255,255,255</span>
+            </div>
+        </div>
+        <div id="color-preview-box">
+            <span id="color-name">White</span>
+        </div>
+        <button id="gen-btn" class="btn">GENERATE</button>
+    </section>
+
+    <div id="custom-alert" class="alert-box">
+        <div class="alert-content">
+            <p id="alert-message"></p>
+            <button id="alert-ok-btn">OK</button>
+        </div>
+    </div>
+
+    <div id="dev-info-box">
+        <span class="dev-credits">Designed & Developed by <a class="dev-credits" id="dev-portfolio-link"
+                href="https://adarshsingh.webflow.io/" target="_blank">Adarsh Singh</a></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
