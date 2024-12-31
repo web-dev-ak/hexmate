@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Color Change</title>
+    <title>Hex Mate</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,12 +31,26 @@
     <section id="main">
         <div id="color-code-box">
             <div id="hex-code-box">
-                <span class="color-code-box-title">HEX</span>
-                <span>#<span id="hex-code">FFFFFF</span></span>
+                <div class="color-code-and-title-left">
+                    <span class="color-code-box-title">HEX</span>
+                    <input type="text" id="hex-code" class="color-code-input-box" value="#FFFFFF">
+                    <!-- <span>#<span id="hex-code">FFFFFF</span></span> -->
+                </div>
+                <div class="color-code-copy-box-right">
+                    <span id="hex-code-search-btn" class="material-symbols-outlined">search</span>
+                    <span id="hex-code-copy-btn" class="material-symbols-outlined">content_copy</span>
+                </div>
             </div>
             <div id="rgb-code-box">
-                <span class="color-code-box-title">RGB</span>
-                <span id="rgb-code">255,255,255</span>
+                <div class="color-code-and-title-left">
+                    <span class="color-code-box-title">RGB</span>
+                    <input type="text" id="rgb-code" class="color-code-input-box" value="255, 255, 255">
+                    <!-- <span id="rgb-code">255,255,255</span> -->
+                </div>
+                <div class="color-code-copy-box-right">
+                    <span id="rgb-code-search-btn" class="material-symbols-outlined">search</span>
+                    <span id="rgb-code-copy-btn" class="material-symbols-outlined">content_copy</span>
+                </div>
             </div>
         </div>
         <div id="color-preview-box">
